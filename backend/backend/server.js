@@ -46,7 +46,7 @@ app.get('/api/simulations/:id/results', (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log('🚀 RescueGPS Drift Engine Server');
   console.log(`🚀 Server running on port ${PORT}`);
 });
