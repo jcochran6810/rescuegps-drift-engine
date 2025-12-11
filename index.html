@@ -1,0 +1,22 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RescueGPS - Search &amp; Rescue Coordination</title>
+
+    <!-- Google Maps API with callback - loads synchronously for reliability -->
+    <script>
+      window.googleMapsLoaded = false;
+      function initGoogleMaps() {
+        window.googleMapsLoaded = true;
+        console.log("✅ Google Maps loaded successfully");
+        // Dispatch event so React can listen
+        window.dispatchEvent(new Event("google-maps-loaded"));
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkPpg_XnONzjPJ6JZSdIVWZi3uAwTwKoM&amp;libraries=places,drawing,geometry&amp;callback=initGoogleMaps"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  
+
+<script type="module" src="/src/index.jsx"></script></body>
